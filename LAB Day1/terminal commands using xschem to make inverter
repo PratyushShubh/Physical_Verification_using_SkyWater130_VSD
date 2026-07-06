@@ -1,0 +1,79 @@
+pratyushshubh2003@vsd-pv:~$ cd.
+
+Command 'cd.' not found, did you mean:
+
+  command 'cde' from deb cde
+  command 'cdo' from deb cdo
+  command 'cdv' from deb codeville
+  command 'cdw' from deb cdw
+  command 'cdp' from deb irpas
+  command 'cdb' from deb tinycdb
+  command 'cd5' from deb cd5
+  command 'cdi' from deb cdo
+
+Try: apt install <deb name>
+
+pratyushshubh2003@vsd-pv:~$ clear
+pratyushshubh2003@vsd-pv:~$ cd
+pratyushshubh2003@vsd-pv:~$ mkdir inverter
+pratyushshubh2003@vsd-pv:~$ cd inverter
+pratyushshubh2003@vsd-pv:~/inverter$ mkdir xschem
+pratyushshubh2003@vsd-pv:~/inverter$ mkdir mag
+pratyushshubh2003@vsd-pv:~/inverter$ mkdir netgen
+pratyushshubh2003@vsd-pv:~/inverter$ cd xschem
+pratyushshubh2003@vsd-pv:~/inverter/xschem$ ln -s /usr/share/pdk/sky130A/libs.tech/xschem/xschemrc
+pratyushshubh2003@vsd-pv:~/inverter/xschem$ ln -s /usr/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
+pratyushshubh2003@vsd-pv:~/inverter/xschem$ cd ../mag
+pratyushshubh2003@vsd-pv:~/inverter/mag$ ln -s /usr/share/pdk/sky130A/libs.tech/netgen/sky130A.magicrc .magicrc
+pratyushshubh2003@vsd-pv:~/inverter/mag$ cd ../netgen
+pratyushshubh2003@vsd-pv:~/inverter/netgen$ cd ../mag
+pratyushshubh2003@vsd-pv:~/inverter/mag$ ls -l
+total 0
+pratyushshubh2003@vsd-pv:~/inverter/mag$ ls -la
+total 8
+drwxrwxr-x 2 pratyushshubh2003 pratyushshubh2003 4096 Jul  6 11:32 .
+drwxrwxr-x 5 pratyushshubh2003 pratyushshubh2003 4096 Jul  6 11:30 ..
+lrwxrwxrwx 1 pratyushshubh2003 pratyushshubh2003   55 Jul  6 11:32 .magicrc -> /usr/share/pdk/sky130A/libs.tech/netgen/sky130A.magicrc
+pratyushshubh2003@vsd-pv:~/inverter/mag$ rm .magicrc
+pratyushshubh2003@vsd-pv:~/inverter/mag$ ls -la
+total 8
+drwxrwxr-x 2 pratyushshubh2003 pratyushshubh2003 4096 Jul  6 11:36 .
+drwxrwxr-x 5 pratyushshubh2003 pratyushshubh2003 4096 Jul  6 11:30 ..
+pratyushshubh2003@vsd-pv:~/inverter/mag$ ln -s /usr/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
+pratyushshubh2003@vsd-pv:~/inverter/mag$ cd ../netgen
+pratyushshubh2003@vsd-pv:~/inverter/netgen$ ln -s /usr/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl setup.tcl
+pratyushshubh2003@vsd-pv:~/inverter/netgen$ cd ../xschem
+pratyushshubh2003@vsd-pv:~/inverter/xschem$ xschem
+% quit
+invalid command name "quit"
+% exit
+
+pratyushshubh2003@vsd-pv:~/inverter/xschem$ cd ../magic
+bash: cd: ../magic: No such file or directory
+pratyushshubh2003@vsd-pv:~/inverter/xschem$ cd ../mag
+pratyushshubh2003@vsd-pv:~/inverter/mag$ magic
+quit
+pratyushshubh2003@vsd-pv:~/inverter/mag$ quit
+
+Command 'quit' not found, but can be installed with:
+
+snap install quit
+Please ask your administrator.
+
+pratyushshubh2003@vsd-pv:~/inverter/mag$ magic -d XR
+pratyushshubh2003@vsd-pv:~/inverter/mag$ magic -d OGL
+pratyushshubh2003@vsd-pv:~/inverter/mag$ magic -d XR
+pratyushshubh2003@vsd-pv:~/inverter/mag$ magic -d XR
+pratyushshubh2003@vsd-pv:~/inverter/mag$ magic -d XR
+pratyushshubh2003@vsd-pv:~/inverter/mag$ cd ../../
+pratyushshubh2003@vsd-pv:~$ cd inverter
+pratyushshubh2003@vsd-pv:~/inverter$ ls
+mag  netgen  xschem
+pratyushshubh2003@vsd-pv:~/inverter$ cd xschem
+pratyushshubh2003@vsd-pv:~/inverter/xschem$ xschem
+% 
+pratyushshubh2003@vsd-pv:~/inverter/xschem$ xschem
+% 
+pratyushshubh2003@vsd-pv:~/inverter/xschem$ ^C
+pratyushshubh2003@vsd-pv:~/inverter/xschem$ ^C
+pratyushshubh2003@vsd-pv:~/inverter/xschem$ 
