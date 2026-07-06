@@ -1,0 +1,82 @@
+pratyushshubh2003@vsd-pv:~$ magic
+pratyushshubh2003@vsd-pv:~$ netgen
+pratyushshubh2003@vsd-pv:~$ xschem
+% exit 
+
+pratyushshubh2003@vsd-pv:~$ ngspice
+******
+** ngspice-34 : Circuit level simulation program
+** The U. C. Berkeley CAD Group
+** Copyright 1985-1994, Regents of the University of California.
+** Copyright 2001-2020, The ngspice team.
+** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+** Creation Date: Thu Aug  5 05:24:37 UTC 2021
+******
+ngspice 1 -> quit
+ngspice-34 done
+pratyushshubh2003@vsd-pv:~$ magic -noconsole
+Use openwrapper to create a new GUI-based layout window
+Use closewrapper to remove a new GUI-based layout window
+
+Magic 8.3 revision 195 - Compiled on Thu Aug  5 04:06:36 UTC 2021.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using TrueColor, VisualID 0x21 depth 24
+Processing system .magicrc file
+New windows will not have a title caption.
+New windows will not have scroll bars.
+New windows will not have a border.
+Using technology "minimum", version 0.0
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:    1.00 x 1.00    (  0.00,  0.00 ), (  1.00,  1.00 )  1.00      
+lambda:        1 x 1       (     0,  0    ), (     1,  1    )  1         
+% quit
+pratyushshubh2003@vsd-pv:~$ netgen -noconsole
+Netgen 1.5.196 compiled on Thu Aug  5 04:55:33 UTC 2021
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+% quit
+pratyushshubh2003@vsd-pv:~$ magic -dnull -noconsole
+
+Magic 8.3 revision 195 - Compiled on Thu Aug  5 04:06:36 UTC 2021.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Using technology "minimum", version 0.0
+% quit
+pratyushshubh2003@vsd-pv:~$ cat > test.tcl
+quit
+pratyushshubh2003@vsd-pv:~$ magic -dnull -noconsole
+
+Magic 8.3 revision 195 - Compiled on Thu Aug  5 04:06:36 UTC 2021.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Using technology "minimum", version 0.0
+% quit
+pratyushshubh2003@vsd-pv:~$ magic -dnull -noconsole test.tcl
+
+Magic 8.3 revision 195 - Compiled on Thu Aug  5 04:06:36 UTC 2021.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Loading "test.tcl" from command line.
+pratyushshubh2003@vsd-pv:~$ netgen -batch source test.tcl
+Netgen 1.5.196 compiled on Thu Aug  5 04:55:33 UTC 2021
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+pratyushshubh2003@vsd-pv:~$ xschem --tcl test.tcl -q
+tcleval(): evaluation of script: test.tcl failed
+
+pratyushshubh2003@vsd-pv:~$ ngspice -b
+Note: No ".plot", ".print", or ".fourier" lines; no simulations run
+pratyushshubh2003@vsd-pv:~$ /usr/locel/lib/netgen/python/lvs_manager.py
+bash: /usr/locel/lib/netgen/python/lvs_manager.py: No such file or directory
+pratyushshubh2003@vsd-pv:~$ /usr/local/lib/netgen/python/lvs_manager.py
+pratyushshubh2003@vsd-pv:~$ 
